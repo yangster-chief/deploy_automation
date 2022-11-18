@@ -1,0 +1,12 @@
+//
+//  Develop.xcconfig
+//  Runner
+//
+//  Created by 양수장 on 2022/11/18.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+DISPLAY_NAME=deploy_automation_dev
+BUNDLE_IDENTIFIER=yangster.chief.deploy_automation.dev
+

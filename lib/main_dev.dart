@@ -5,6 +5,6 @@ import 'package:deploy_automation/src/configure/app_configure.dart';
 /// File Name: main_dev
 /// Created by sujangmac on 2022/11/17
 ///
-/// Description: [BuildType.product] 앱의 진입지점
+/// Description: [BuildType.develop] 앱의 진입지점
 ///
-void main() => AppConfigure.newInstance(BuildType.product).run();
+void main() => AppConfigure.newInstance(BuildType.develop).run();

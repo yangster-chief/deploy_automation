@@ -30,12 +30,12 @@ android {
     ndkVersion flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 
     sourceSets {
@@ -51,6 +51,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        dimension "build-type"
     }
 
     buildTypes {
@@ -58,6 +59,18 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+        }
+    }
+
+    flavorDimensions "build-type"
+    productFlavors {
+        develop {
+            applicationIdSuffix = '.dev'
+            manifestPlaceholders = [appName: "deploy_automation_dev"]
+        }
+
+        product {
+            manifestPlaceholders = [appName: "deploy_automation"]
         }
     }
 }
